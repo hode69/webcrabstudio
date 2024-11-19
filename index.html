@@ -5,34 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crab Studio</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Galdeano&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
 </head>
 
 <body>
-<div class="header">
-  <div class="header-container">
-    <div class="logo"><h1>INI LOGO</h1><img src="" alt=""></div>
-    <div class="navbar">
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="active" href="/index.html">Portfolio</a></li>
-          <li><a class="active" href="/index.html">Journal</a></li>
-          <li><a class="active" href="/index.html">About</a></li>
-          <button class="header-button" type="button"><h3>Book a Meeting</h3></button>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+<header id="page-header">
+  <div class="header-wrapper">
+    <div class="header-container">
+      <div class="logo-header">
+        <a href=""><img src="assets/img/logo.png" class="img-logo" ></a>
+      </a></div>
+      <div class="navbar">
+        <nav id="navbar">
+          <ul class="menu" role="list">
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Journal</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+        <a href="#" class="header-button w-button">Book a Meeting </a>
+      </div>
+      
     </div>
-    
-  </div>
-</div>
+  </div>  
+</header>
 
 <div class="main-content">
   <div class="container1">
     <div class="content1-container1">
       <div class="content1-subcontainer">
-        <h1 class="welcome-text">Welcome to<br> Crab Studio</h1>
-        <p>We're a creative studio based in Bali that help create animated videos or illustrations for commercials, short films, music videos, or branded content.</p>
-        <button class="content-button" type="button"><h3>Book a Meeting Now</h3></button>
+        <h1 class="welcome-text">Welcome to Crab Studio</h1>
+        <p style="color: black;">We're a creative studio based in Bali that help create animated videos or illustrations for commercials, short films, music videos, or branded content.</p>
+        <a href="#" class="content-button w-button">Book a Meeting Now</a>
       </div>
     </div>
 
@@ -42,14 +55,59 @@
   </div>
 
   <div class="container2">
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, ipsum provident. Omnis excepturi, sunt dolores quidem magnam esse optio eligendi dolorum culpa molestiae, debitis quod repellendus nisi porro libero illo.</p>
+    <div>
+      <img class="content2" src="assets/img/sample1.jpg" alt="">
+    </div>
   </div>
+
+  <div class="container3">
+    <p class="content3-text">Trusted by hundreds of designers & developers from over hundreds of companies worldwide</p>
+    <div class="content3-subcontainer">
+      <img class="content3-img" src="assets/img/sample-company.svg" alt="">
+      <img class="content3-img" src="assets/img/sample-company.svg" alt="">
+      <img class="content3-img" src="assets/img/sample-company.svg" alt="">
+      <img class="content3-img" src="assets/img/sample-company.svg" alt="">
+      <img class="content3-img" src="assets/img/sample-company.svg" alt="">
+      <img class="content3-img" src="assets/img/sample-company.svg" alt="">
+      <img class="content3-img" src="assets/img/sample-company.svg" alt="">
+      <img class="content3-img" src="assets/img/sample-company.svg" alt="">
+      <img class="content3-img" src="assets/img/sample-company.svg" alt="">
+      <img class="content3-img" src="assets/img/sample-company.svg" alt="">
+      <img class="content3-img" src="assets/img/sample-company.svg" alt="">
+    </div>
+  </div>
+
+  <div class="container4"></div>
 
   
 </div>
-    
-    
 
+<div class="wrapper">
+</div>
+    
+    
+<footer>
+  <div class="footer-wrapper"></div>
+  <div class="footer-container">
+    <div class="logo-footer flex-grow"><img class="img-logo-footer" src="assets/img/logo.png" alt=""></div>
+    <div class="contact">
+      <h3>Contact</h3>
+      <p style="padding-top: 1rem;">Address : Jl. Bukit Indah I Jl. Kebo Iwa No.6, Padangsambian Kaja, Kec. Denpasar Bar., Kota Denpasar, Bali</p>
+      <div class="icon-footer flex-grow"></div>
+    </div>
+    <div class="explore flex-grow">
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Journal</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
 </body>
+
+<script src="assets/script/header.js"></script>
 
 </html>
