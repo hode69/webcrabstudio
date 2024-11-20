@@ -3,6 +3,7 @@ html {
     width: 100%;
     padding: 0s;
     margin: 0;
+    overflow:scroll;
     
 }
 
@@ -21,7 +22,6 @@ header {
     background-color: white;
     z-index: 300;
     height: 3rem;
-    width: 100%;
 }
 
 header.header-scroll {
@@ -299,7 +299,8 @@ footer {
 
 .sosmed {
     height: auto;
-    margin: 1.44rem auto auto 0.72rem;
+    margin: 1.44rem auto auto auto;
+    align-items: center;
 }
 
 
@@ -317,23 +318,28 @@ footer {
 .icon-footer {
     margin-top: 1rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1.2rem;
 }
 
 .icon-item {
     padding-top: 1rem;
-    width: fit-content;
-    height: fit-content;
-    justify-content: center;
+    display: flex;
     gap: 1 rem;
     margin: 0;
     color: #ffffff;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.icon-item p {
+    margin: 0.3rem auto;
 }
 
 .icon-img {
-    width: 1.92rem;
+    width: 2rem;
     height: auto;
     filter:invert(100%);
 }
@@ -347,7 +353,20 @@ footer {
     margin: 0.96rem auto;
 }
 
+.col-25{
+    width: 25%;
+    height: 100%;
+    float: left;
+    object-fit: fill;
+    
+}
 
+.col-75{
+    width: 75%;
+    height: 100%;
+    float: left;
+
+}
 
 /*text*/
 
@@ -361,7 +380,7 @@ footer {
 .content3-text {
     margin: 0 auto;
     width: 100%;
-    font-size: 1.296rem;
+    font-size: 0.95rem;
     font-weight: 600;
     color: rgb(32, 32, 32);
     text-align: center  ;
