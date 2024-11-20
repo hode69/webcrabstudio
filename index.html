@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crab Studio</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script
-    src="https://code.jquery.com/jquery-3.7.1.js"
-    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-    crossorigin="anonymous"></script>
-    
+    <script src="assets/script/jquery.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Galdeano&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -17,8 +14,9 @@
 </head>
 
 <body>
-<header id="page-header">
-  <div class="header-wrapper">
+<header id="page-header" w3-include-html="header.html">
+  <!--
+    <div class="header-wrapper">
     <div class="header-container">
       <div class="logo-header">
         <a href=""><img src="assets/img/logo.png" class="img-logo" ></a>
@@ -31,12 +29,13 @@
             <li><a href="#">About</a></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav><!-- .navbar -->
+        </nav>
         <a href="#" class="header-button w-button">Book a Meeting </a>
       </div>
       
     </div>
-  </div>  
+  </div> 
+  --> 
 </header>
 
 <div class="main-content">
@@ -88,12 +87,22 @@
     
 <footer>
   <div class="footer-wrapper"></div>
-  <div class="footer-container">
-    <div class="logo-footer flex-grow"><img class="img-logo-footer" src="assets/img/logo.png" alt=""></div>
+  <div class="footer-container flex-grow">
+    <div class="logo-footer "><a href=""><img class="img-logo-footer" src="assets/img/logo.png" alt=""></a></div>
     <div class="contact">
       <h3>Contact</h3>
       <p style="padding-top: 1rem;">Address : Jl. Bukit Indah I Jl. Kebo Iwa No.6, Padangsambian Kaja, Kec. Denpasar Bar., Kota Denpasar, Bali</p>
-      <div class="icon-footer flex-grow"></div>
+      <div class="icon-footer flex-grow">
+        <div class="icon-item">
+          <a href="https://instagram.com/"><img class="icon-img" src="assets/img/sample-ig.svg" alt=""></a>
+        </div>
+        <div class="icon-item">
+          <a href="https://instagram.com/"><img class="icon-img" src="assets/img/sample-ig.svg" alt=""></a>
+        </div>
+        <div class="icon-item">
+          <a href="https://instagram.com/"><img class="icon-img" src="assets/img/sample-ig.svg" alt=""></a>
+        </div>
+      </div>
     </div>
     <div class="explore flex-grow">
       <h3>Explore</h3>
@@ -109,5 +118,8 @@
 </body>
 
 <script src="assets/script/header.js"></script>
+<script>
+  w3.includeHTML();
+</script>
 
 </html>

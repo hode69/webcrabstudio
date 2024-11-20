@@ -62,11 +62,6 @@ header.header-scroll {
     margin-bottom: auto;
     height: 95%;
 }
-.img-logo-footer {
-    margin-top: auto;
-    margin-bottom: auto;
-    height: 95%;
-}
 
 .navbar {
     padding: 0;
@@ -216,24 +211,61 @@ footer {
 
 .logo-footer {
     margin-left: 0;
+    margin-top: 0;
     align-items: center;
     max-width: 100%;
-    height: 4rem;
+    width: 25rem;
+    height: auto;
     margin: auto;
+    top: 0;
     padding: 2rem;
 }
 
+.img-logo-footer {
+    margin-top: 0;
+    margin-left: auto;
+    height: 95%;
+    max-height: 4rem
+}
+
 .contact {
-    width: 30rem;
+    width: 25rem;
+    height: auto;
     align-items: center;
     margin: 2rem 2rem auto auto;
 }
 
 .explore {
-    width: 20rem;
-    justify-content: center;
+    width: 25rem;
+    height: auto;
+    align-items: center;
     margin: 2rem 2rem auto auto;
 }
+
+.icon-footer {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.icon-item {
+    margin: 0 auto;
+    width: ;
+    height: auto;
+    justify-content: center;
+    gap: 1 rem;
+    margin: 0;
+    color: #ffffff;
+}
+
+.icon-img {
+    width: 5vh;
+    height: auto;
+    filter:invert(100%);
+}
+
 
 
 /*text*/
