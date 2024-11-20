@@ -17,10 +17,11 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 1rem;
-    padding: 0.5rem clamp(1rem, 4vw, 2rem);
+    padding: 0.5rem clamp(1rem, 3.415rem, 2rem);
     background-color: white;
-    z-index: 997;
-    height: 9vh;
+    z-index: 300;
+    height: 3rem;
+    width: 100%;
 }
 
 header.header-scroll {
@@ -43,14 +44,14 @@ header.header-scroll {
     align-items: center;
     width: 100%;
     height: 100%;
-    margin-top: 0.1vh;
+    margin-top: 0.05rem;
     margin-bottom: auto;
     
 }
 
 .logo-header {
     margin-left: 0;
-    max-width: 10vw;
+    max-width: 8.537rem;
     align-items: center;
     width: auto;
     height: 100%;
@@ -79,7 +80,7 @@ header.header-scroll {
     display: flex;
     align-items: center;
     gap: 3rem;
-    font-size: 2vhvh;
+    font-size: 0.9rem;
 }
 
 .menu a {
@@ -109,7 +110,7 @@ body {
 }
 
 .main-content{
-    padding-top: 20vh;
+    padding-top: 9.6rem;
 }
 
 .container1 {
@@ -158,19 +159,19 @@ body {
 .container2 {
     width: 90%;
     margin: auto;
-    padding-top: 25vh;
+    padding-top: 12rem;
 }
 
 .content2 {
     width: 100%;
-    max-height: 50vh;
+    max-height: 24rem;
     object-fit:fill;
 }
 
 .container3 {
     width: 90%;
     margin: auto;
-    padding-top: 25vh;
+    padding-top: 12rem;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -190,7 +191,7 @@ body {
 
 .content3-img {
     padding: 0 0 0.5rem 0;
-    height: 5vh;
+    height: 2.4rem;
     width: auto;
     filter: grayscale(100%);
 }
@@ -201,6 +202,7 @@ footer {
     bottom: 0;
     color: #ffffff;
     background-color: #0e808f;
+    font-size: 1rem;
 }
 
 .footer-container {
@@ -229,11 +231,11 @@ footer {
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
-    margin-bottom: 2vh;
+    margin-bottom: 0.96rem;
 }
 
 .subscribe {
-    margin: 0 auto auto 1.5vh;
+    margin: 0 auto auto 0.72rem;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -297,18 +299,18 @@ footer {
 
 .sosmed {
     height: auto;
-    margin: 3vh auto auto 1.5vh;
+    margin: 1.44rem auto auto 0.72rem;
 }
 
 
 .contact {
     height: auto;
-    margin: 3vh auto auto 1.5vh;
+    margin: 1.44rem auto auto 0.72rem;
 }
 
 .explore {
     height: auto;
-    margin: 3vh auto auto 1.5vh;
+    margin: 1.44rem auto auto 0.72rem;
 }
 
 
@@ -321,9 +323,9 @@ footer {
 }
 
 .icon-item {
-    margin: 1rem auto;
-    width: 3vh;
-    height: auto;
+    padding-top: 1rem;
+    width: fit-content;
+    height: fit-content;
     justify-content: center;
     gap: 1 rem;
     margin: 0;
@@ -331,7 +333,7 @@ footer {
 }
 
 .icon-img {
-    width: 5vh;
+    width: 1.92rem;
     height: auto;
     filter:invert(100%);
 }
@@ -342,7 +344,7 @@ footer {
     justify-content: center;
     text-align: center;
     color: #303030;
-    margin: 2vh auto;
+    margin: 0.96rem auto;
 }
 
 
@@ -353,13 +355,13 @@ footer {
     text-align: left;
     width: 100%;
     margin:0 auto 0 0;
-    font-size: 11vh;
+    font-size: 5.28rem;
 }
 
 .content3-text {
     margin: 0 auto;
     width: 100%;
-    font-size: 2.7vh;
+    font-size: 1.296rem;
     font-weight: 600;
     color: rgb(32, 32, 32);
     text-align: center  ;
@@ -390,15 +392,15 @@ footer {
 
 /*button*/
 .header-button {
-    margin: 1.5vh;
-    margin-right: 2vh;
+    margin: 0.72rem;
+    margin-right: 0.96rem;
     display: flex;
     color: #ffffff;
     background-color: rgb(255, 81, 0);
     text-decoration: none;
     text-align: center;
     font-weight:500;
-    padding: 2.3vh;
+    padding: 1.104rem;
     border-radius: 7px;
     transition: 400ms;
 }
@@ -426,7 +428,7 @@ footer {
     text-decoration: none;
     text-align: center;
     font-weight:500;
-    padding: 2.3vh;
+    padding: 1.104rem;
     border-radius: 7px;
     transition: 400ms;
     
@@ -452,7 +454,7 @@ footer {
     text-decoration: none;
     text-align: center;
     font-weight:500;
-    padding: 1vh;
+    padding: 0.48rem;
     border-radius: 7px;
     transition: 400ms;
     height: 1.5rem;
