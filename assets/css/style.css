@@ -500,6 +500,7 @@ footer {
     text-align: center;
     color: #ffffff;
     margin: 0.96rem auto;
+    padding-bottom: 2rem;
 }
 
 .col-25{
@@ -675,7 +676,7 @@ footer {
     text-decoration: none;
     text-align: center;
     font-weight:500;
-    padding: 0.48rem 0.8rem;
+    padding: 1rem;
     border-radius: 7px;
     transition: 300ms;
     height: 1.5rem;
