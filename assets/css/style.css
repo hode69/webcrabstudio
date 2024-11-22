@@ -283,20 +283,22 @@ body {
     grid-auto-flow:column ;
     grid-auto-columns: calc((100%/3) - 2rem);
     overflow: hidden;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
     gap: 3rem;
     white-space: nowrap;
     scroll-behavior: smooth;
     overflow-x: hidden;
     scroll-snap-type: x mandatory;
     scroll-padding: 0;
+    
 }
 
 .carousel-item {
     border-radius: 15px;
     background-color: #ffffff;
-    box-shadow: 0 -0.4rem 1rem 0.2rem rgba(0, 0, 0, 0.12);
+    box-shadow: 0rem 0rem 1rem 0.2rem rgba(0, 0, 0, 0.219);
     scroll-snap-align: center;
+    
 }
 
 .carousel-item:first-child {
@@ -306,6 +308,7 @@ body {
 
 .carousel-item:last-child {
     margin-right: 0;
+    
 }
 
 .carousel-img {
@@ -316,7 +319,7 @@ body {
 
 .carousel-button {
     position: absolute;
-    width: calc(100% + 4rem);
+    width: calc(100% + 2rem);
     height: fit-content;
     top : 50%;
     transform: translate(-50%,-50%);
