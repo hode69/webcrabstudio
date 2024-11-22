@@ -30,7 +30,7 @@ header {
     padding: 0.5rem clamp(1rem, 3.415rem, 2rem);
     background-color: white;
     z-index: 999;
-    height: 4rem;
+    height: 5rem;
 }
 
 header.header-scroll {
@@ -268,36 +268,39 @@ body {
     position: relative;
 }
 
-.carousel-wrapper {
+.container5-carousel {
     width: 80%;
     max-width: 1200px;
     height: fit-content;
     margin: 0 auto;
     position: relative;
     padding: 1rem 0;
+    overflow: hidden;
+    
 }
 
-.container5-carousel {
+.carousel-wrapper {
+    position: relative;
     margin: 0 auto;
     display: grid;
     grid-auto-flow:column ;
-    grid-auto-columns: calc((100%/3) - 2rem);
-    overflow: hidden;
-    padding: 2rem 1rem;
-    gap: 3rem;
+    grid-auto-columns: calc((100% - (1rem * (var(--per-view) - 1))) / var(--per-view));
+    /* padding: 2rem 1rem; */
+    gap: 1rem;
     white-space: nowrap;
     scroll-behavior: smooth;
-    overflow-x: hidden;
     scroll-snap-type: x mandatory;
     scroll-padding: 0;
+    transition: 0.5s ease-in-out;
     
 }
 
 .carousel-item {
     border-radius: 15px;
     background-color: #ffffff;
-    box-shadow: 0rem 0rem 1rem 0.2rem rgba(0, 0, 0, 0.219);
-    scroll-snap-align: center;
+    border: 0.5px solid #414c6138;
+    box-shadow: 0rem 0rem 0.8rem 0.1rem rgba(0, 0, 0, 0.116);
+    /* scroll-snap-align: left; */
     
 }
 
@@ -319,17 +322,19 @@ body {
 
 .carousel-button {
     position: absolute;
-    width: calc(100% + 2rem);
+    width: calc(90%);
     height: fit-content;
     top : 50%;
     transform: translate(-50%,-50%);
     left: 50%;
+    z-index: 800;
 }
 
 .container5-vm {
     display: flex;
     width: 100%;
     height: 100%;
+    padding: 2rem 10%;
 }
 
 .container6 {
@@ -734,7 +739,8 @@ footer {
 .carousel-item p{
     text-wrap:wrap;
     margin: 1rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    text-align: center;
 }
 
 
@@ -836,7 +842,7 @@ footer {
     line-height: 50px;
     text-align: center;
     border-radius: 50%;
-    background-color: #ffffffc4;
+    background-color: #ffffff;
     margin: 0;
     box-shadow: 3px 3px 9px 5px rgba(0, 0, 0,0.12);
     position: absolute;
@@ -844,9 +850,13 @@ footer {
     min-height: 50px;
     cursor: pointer;
 }
+
+.carousel-button i:active {
+    background-color: #d1d1d1;
+}
+
 .carousel-button i:first-child{
     left: 0;
-    display: none;
 }
 .carousel-button i:last-child{
     right: 0;

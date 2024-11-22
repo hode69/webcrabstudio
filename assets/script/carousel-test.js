@@ -5,7 +5,7 @@ const prevButton = document.getElementById('car-prev');
 const itemLength = carouselItems.length;
 const perView = 3;
 let totalScroll = 0;
-const delay = 2500;
+const delay = 2000;
 
 carouselWrapper.style.setProperty('--per-view', perView);
 
@@ -51,7 +51,7 @@ function scrollToPrev() {
       carouselWrapper.style.transition = '0s'; // Disable transition for instant reset
       totalScroll = itemLength - 1; // Reset the scroll counter to the last real item
       carouselWrapper.style.left = `-${(perView + totalScroll) * itemWidth}px`;
-    }, 50); // Wait for the smooth transition to complete
+    }, 300); // Wait for the smooth transition to complete
   }
 }
 
