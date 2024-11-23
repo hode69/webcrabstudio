@@ -322,8 +322,9 @@ body {
 
 .carousel-button {
     position: absolute;
-    width: calc(90%);
-    height: fit-content;
+    width: calc(80% + 3rem);
+    max-width: 1248px;
+    height: 3rem;
     top : 50%;
     transform: translate(-50%,-50%);
     left: 50%;
@@ -335,6 +336,7 @@ body {
     width: 100%;
     height: 100%;
     padding: 2rem 10%;
+    align-items: center;
 }
 
 .container6 {
@@ -537,6 +539,7 @@ footer {
     z-index: 1111;
     transition: 200ms ease-in-out;
     align-items: center;
+    padding: 0 8px;
 }
 
 .subs-entry input:active, input:focus {
@@ -872,8 +875,8 @@ footer {
     font-weight: 500;
     font-size: 1.25rem;
     transition: 300ms ease-in-out;
-    margin: 0 0 0 auto;
-    box-shadow: 1px 1px 10px 3px #00000063;
+    margin: 0 auto;
+    box-shadow: 1px 1px 10px 2px #5a5a5a77;
 }
 .content5-button:hover {
     background-color: rgb(255, 80, 36);
