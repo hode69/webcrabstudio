@@ -11,7 +11,7 @@ window.onscroll = function(e) {
 // navbar
 
 
-window.onload = function () {
+document.addEventListener("DOMContentLoaded", function () {
     const toggleNavbar = document.querySelector(".toggle-navbar");
     const toggleNavbarIcon = document.querySelector(".toggle-navbar i");
     const dropdownMenu = document.querySelector(".dropdown-menu");    
@@ -25,6 +25,6 @@ window.onload = function () {
 
     toggleNavbar.addEventListener("click", toggleMenu);
     toggleNavbar.addEventListener("touchstart", toggleMenu);
-};
+});
 
 
