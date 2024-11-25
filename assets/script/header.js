@@ -24,6 +24,7 @@ window.onload = function () {
 
     toggleNavbar.addEventListener("click", toggleMenu);
     // toggleNavbar.addEventListener("touchstart", toggleMenu);
+    // toggleNavbar.addEventListener("pointerdown", toggleMenu);
 };
 
 
