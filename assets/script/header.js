@@ -11,19 +11,20 @@ window.onscroll = function(e) {
 // navbar
 
 
-document.addEventListener("DOMContentLoaded", function () {
+window.onload = function () {
     const toggleNavbar = document.querySelector(".toggle-navbar");
     const toggleNavbarIcon = document.querySelector(".toggle-navbar i");
-    const dropdownMenu = document.querySelector(".dropdown-menu");    
-    
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+
     const toggleMenu = function () {
         dropdownMenu.classList.toggle("open");
         const isOpen = dropdownMenu.classList.contains("open");
-    
         toggleNavbarIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
     };
 
     toggleNavbar.addEventListener("click", toggleMenu);
-});
+    toggleNavbar.addEventListener("touchstart", toggleMenu);
+};
+
 
 
