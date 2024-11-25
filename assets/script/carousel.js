@@ -1,31 +1,53 @@
 const carouselWrapper = document.querySelector('.carousel-wrapper');
-const carouselItems = document.querySelectorAll('.carousel-item');
+const carouselItems = Array.from(document.querySelectorAll('.carousel-item'));
 const nextButton = document.getElementById('car-next');
 const prevButton = document.getElementById('car-prev');
-const itemLength = carouselItems.length;
-const perView = 3;
+let itemLength = carouselItems.length;
+let perView = calculatePerView();
 let totalScroll = 0;
-const delay = 2500;
+const delay = 2000;
 
-carouselWrapper.style.setProperty('--per-view', perView);
-
-// Duplicate the first and last items for seamless looping
-for (let i = 0; i < perView; i++) {
-  carouselWrapper.insertAdjacentHTML('beforeend', carouselItems[i].outerHTML); // Clone first items
+// Function to calculate perView based on window width
+function calculatePerView() {
+  if (window.innerWidth > 1000) {
+    return 3;
+  } else if (window.innerWidth > 768) {
+    return 2;
+  } else {
+    return 1;
+  }
 }
-for (let i = itemLength - perView; i < itemLength; i++) {
-  carouselWrapper.insertAdjacentHTML('afterbegin', carouselItems[i].outerHTML); // Clone last items
+
+// Function to calculate the item width dynamically
+function calculateItemWidth() {
+  return document.querySelector('.carousel-item').offsetWidth + 16; // Adjust for margin or padding
 }
 
-// Initialize the scroll position to the first real item
-const itemWidth = document.querySelector('.carousel-item').offsetWidth + 16;
-carouselWrapper.style.left = `-${perView * itemWidth}px`;
+// Function to update carousel layout on resize
+function updateCarousel() {
+  perView = calculatePerView();
+  carouselWrapper.style.setProperty('--per-view', perView);
 
-let autoScroll = setInterval(scrollToNext, delay);
+  // Clear and recreate the carousel items with clones
+  carouselWrapper.innerHTML = ''; 
+  carouselItems.forEach(item => carouselWrapper.appendChild(item.cloneNode(true)));
+  for (let i = 0; i < perView; i++) {
+    carouselWrapper.insertAdjacentHTML('beforeend', carouselItems[i].outerHTML); // Clone first items
+  }
+  for (let i = itemLength - perView; i < itemLength; i++) {
+    carouselWrapper.insertAdjacentHTML('afterbegin', carouselItems[i].outerHTML); // Clone last items
+  }
+
+  // Reset the scroll position
+  const itemWidth = calculateItemWidth();
+  carouselWrapper.style.left = `-${perView * itemWidth}px`;
+  totalScroll = 0; // Reset scroll count
+}
 
 // Scroll to the next item
 function scrollToNext() {
   totalScroll++;
+  const itemWidth = calculateItemWidth();
   carouselWrapper.style.transition = '.3s'; // Enable smooth transition
   carouselWrapper.style.left = `-${(perView + totalScroll) * itemWidth}px`;
 
@@ -42,6 +64,7 @@ function scrollToNext() {
 // Scroll to the previous item
 function scrollToPrev() {
   totalScroll--;
+  const itemWidth = calculateItemWidth();
   carouselWrapper.style.transition = '.3s'; // Enable smooth transition
   carouselWrapper.style.left = `-${(perView + totalScroll) * itemWidth}px`;
 
@@ -51,7 +74,7 @@ function scrollToPrev() {
       carouselWrapper.style.transition = '0s'; // Disable transition for instant reset
       totalScroll = itemLength - 1; // Reset the scroll counter to the last real item
       carouselWrapper.style.left = `-${(perView + totalScroll) * itemWidth}px`;
-    }, 50); // Wait for the smooth transition to complete
+    }, 300); // Wait for the smooth transition to complete
   }
 }
 
@@ -84,3 +107,12 @@ prevButton.addEventListener('click', () => {
   clearInterval(autoScroll); // Pause auto-scroll
   scrollToPrev();
 });
+
+// Add resize listener to adjust carousel on window resize
+window.addEventListener('resize', updateCarousel);
+
+// Initialize carousel layout
+updateCarousel();
+
+// Start auto-scroll
+let autoScroll = setInterval(scrollToNext, delay);

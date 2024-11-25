@@ -4,7 +4,6 @@ html {
     padding: 0s;
     margin: 0;
     overflow:scroll;
-    
 }
 
 *{
@@ -20,11 +19,13 @@ html {
     height: 200vh;
   }
 
+/* HEADER */
+
 header {
     position: sticky;
     top: 0;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: space-between;
     gap: 1rem;
     padding: 0.5rem clamp(1rem, 3.415rem, 2rem);
@@ -36,7 +37,7 @@ header {
 header.header-scroll {
     box-shadow: 0px 3px 10px 8px rgba(0, 0, 0, 0.12);
     transition-duration: 400ms;
-  }
+}
 
 .header-wrapper {
     height: 100%;
@@ -65,9 +66,7 @@ header.header-scroll {
     align-items: center;
     width: auto;
     height: 100%;
-    
 }
-
 
 
 .img-logo {
@@ -75,8 +74,8 @@ header.header-scroll {
     height: 95%;
 }
 
-.navbar {
-    padding: 0;
+.navbar-container {
+    /* padding-right: 2.5%; */
     display: flex;
     font-weight: bold;
     text-decoration: none;
@@ -84,6 +83,21 @@ header.header-scroll {
     flex-direction: row;
     gap: 3rem;
     margin-right: 0;
+}
+
+.toggle-navbar {
+    display: none;
+    width: 1.5rem;
+}
+@media only screen and (max-width:768px) {
+    .toggle-navbar{
+        display: block;
+    }
+}
+
+.toggle-navbar i {
+    cursor: pointer;
+    color: #eb0000;
 }
 
 .menu {
@@ -94,8 +108,12 @@ header.header-scroll {
 }
 
 .menu a {
+    cursor: pointer;
     color: #eb0000;
     text-decoration: none;
+}
+.menu a:hover {
+    color: #701414;
 }
 
 .menu li {
@@ -103,6 +121,60 @@ header.header-scroll {
     font-weight: 400;
 }
 
+.dropdown-menu {
+    display: none;
+}
+
+@media only screen and (max-width:768px) {
+    .menu {
+        display: none;
+    }
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    background-color: #ffffffc5;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 10px 30px 1px rgba(0, 0, 0, 0.12);
+    padding: 0 1rem;
+    border-radius: 10px;
+    z-index: 30;
+    transition: 300ms ease-in-out;
+    text-decoration: none;
+    overflow: hidden;
+    height: 0px;
+    transition: height 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) ease-in-out;
+}
+
+.dropdown-menu.open {
+    height: 8.5rem;
+    padding: 1rem;
+}
+
+
+.dropdown-menu a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #eb0000;
+    margin-right: auto 0 auto auto;
+}
+.dropdown-menu a:hover {
+    color: #701414;
+}
+
+.dropdown-menu li {
+    list-style-type: none;
+    padding: 0.5rem 1.5rem;
+    justify-content: center;
+}
+
+@media only screen and (max-width:768px) {
+    .dropdown-menu {
+        display: block;
+    }
+}
 
 body {
     width: 100%;
@@ -131,10 +203,9 @@ body {
     gap: 3rem;
     padding: 5rem 0;
 }
-
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:1050px) {
     .container1{
-        width: 95%;
+        width: 80%;
         grid-template-columns: 1fr;
         gap: 1rem;
     }
@@ -186,11 +257,70 @@ body {
     padding: 5rem 0;
 }
 
+.container2-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
+    justify-content: center;
+}
+
+.c2-img-container {
+    height: auto;
+    width: calc(100%/3);
+}
+
 .content2-img {
     width: 100%;
-    max-height: 24rem;
-    object-fit:fill;
+    display: block;
+    margin: 0;
+    object-fit:cover;
+    height: auto;
 }
+
+@media only screen and (max-width:1050px) {
+    .container2-wrapper{
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+    }   
+    .c2-img-container {
+        width: 50%;
+    }
+}
+@media only screen and (max-width:768px) {
+    .container2-wrapper{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .c2-img-container {
+        width: 100%;
+    }
+}
+
+/* .container2-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+}
+@media only screen and (max-width:1050px) {
+    .container2-wrapper{
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+    }
+    .c2-img-container:last-child {
+        grid-column: 1/-1;
+    }
+}
+@media only screen and (max-width:768px) {
+    .container2-wrapper{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .c2-img-container:last-child {
+        grid-column: 1/-1;
+    }
+} */
+
 
 .container3 {
     width: 90%;
@@ -242,7 +372,7 @@ body {
 
 .content4 {
     width: 23rem;
-    padding: 0 1rem;
+    padding: 1rem;
     align-items: center;
 }
 
@@ -276,7 +406,6 @@ body {
     position: relative;
     padding: 1rem 0;
     overflow: hidden;
-    
 }
 
 .carousel-wrapper {
@@ -293,6 +422,12 @@ body {
     scroll-padding: 0;
     transition: 0.5s ease-in-out;
     
+}
+
+@media only screen and (max-width:768px) {
+    .container5-carousel {
+        width: 65%;
+    }
 }
 
 .carousel-item {
@@ -330,6 +465,11 @@ body {
     left: 50%;
     z-index: 800;
 }
+@media only screen and (max-width:768px) {
+    .carousel-button {
+        width: calc(65% + 4rem);
+    }
+}
 
 .container5-vm {
     display: flex;
@@ -344,6 +484,12 @@ body {
     margin: 0 auto;
     padding: 1rem 0;
 }
+@media only screen and (max-width:1000px) {
+    .container6{
+        width: 95%;
+    }
+}
+
 
 .container6-wrapper {
     width: 90%;
@@ -353,11 +499,18 @@ body {
     gap: 3rem;
     padding: 5rem 0;
 }
+@media only screen and (max-width:1080px) {
+    .container6-wrapper{
+        width: 95%;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
 
 .content6-container1 {
-    max-width: fit-content;
-    display: flex;
+    margin: auto;
     align-items: center;
+    max-width: fit-content;
 }
 
 .content6 {
@@ -371,8 +524,15 @@ body {
     display: block;
     margin-right: 0;
     margin-left: auto;
-    object-fit: cover;
+    object-fit:cover;
     border-radius: 13px;
+}
+@media only screen and (max-width:1080px) {
+    .content6-img{
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+    }
 }
 
 .content6-container2 {
@@ -468,11 +628,12 @@ footer {
     display: flex;
     justify-content: space-between;
     grid-template-columns: 1fr 1fr;
+    gap: 1rem;
     flex-direction: column;
     padding-bottom: 0.3rem;
     margin: 0 auto;
-
 }
+
 .footer-subcontainer1 {
     width: 100%;
     display: grid;
@@ -482,6 +643,12 @@ footer {
     gap: 1rem;
     flex-direction: row;
 }
+@media only screen and (max-width:900px) {
+    .footer-subcontainer1{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 
 .footer-subcontainer2 {
     display: flex;
@@ -489,16 +656,23 @@ footer {
     flex-wrap: wrap;
     width: 100%;
     height: fit-content;
-    margin-bottom: 0.96rem;
+    margin-bottom: 1rem;
     align-items: center;
 }
 
 .subscribe {
-    margin: 1.44rem auto auto 0.72rem;
+    margin: 1.44rem 0.5rem;
+    margin-bottom: auto;
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-left: 5rem;
+    /* margin-left: 5rem; */
+}
+@media only screen and (max-width:900px) {
+    .subscribe{
+        grid-column: 1/-1;
+        padding-bottom: 3rem;
+    }
 }
 
 .subs-form {
@@ -520,7 +694,7 @@ footer {
     width: 100%;
     min-width: 250px;
     align-items: center;
-    margin-right: 20px;
+    /* margin-right: 20px; */
     margin-bottom: 20px;
     
 }
@@ -576,12 +750,12 @@ footer {
 
 .contact {
     height: auto;
-    margin: 1.44rem auto auto 0.72rem;
+    margin: 1.44rem 0.5rem;
 }
 
 .explore {
     height: auto;
-    margin: 1.44rem auto auto 0.72rem;
+    margin: 1.44rem 0.5rem;
 
 }
 
@@ -820,10 +994,14 @@ footer {
     align-items: center;
     width: fit-content;
     margin-left: auto;
-    margin-right: 1.2rem;
-    border: none;
-    
+    border: none;   
 }
+@media only screen and (max-width:900px) {
+    .subs-button{
+        width: 100%;
+    }
+}
+
 .subs-button:hover {
     background-color: rgb(255, 80, 36);
     transition: 300ms ease-in-out;
@@ -845,7 +1023,8 @@ footer {
     line-height: 50px;
     text-align: center;
     border-radius: 50%;
-    background-color: #ffffff;
+    background-color: #ffffffa2;
+    backdrop-filter: blur(5px);
     margin: 0;
     box-shadow: 3px 3px 9px 5px rgba(0, 0, 0,0.12);
     position: absolute;
@@ -855,7 +1034,7 @@ footer {
 }
 
 .carousel-button i:active {
-    background-color: #d1d1d1;
+    background-color: #686868a2;
 }
 
 .carousel-button i:first-child{
