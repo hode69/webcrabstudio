@@ -435,8 +435,14 @@ body {
     background-color: #ffffff;
     border: 0.5px solid #414c6138;
     box-shadow: 0rem 0rem 0.8rem 0.1rem rgba(0, 0, 0, 0.116);
-    /* scroll-snap-align: left; */
-    
+    transition: 300ms ease-in-out;
+}
+
+.carousel-item:hover {
+    transition: 300ms ease-in-out;
+    transform: translateY(-0.8rem);
+    opacity: 90%;
+    cursor: pointer;
 }
 
 .carousel-item:first-child {
@@ -995,6 +1001,7 @@ footer {
     width: fit-content;
     margin-left: auto;
     border: none;   
+    cursor: pointer;
 }
 @media only screen and (max-width:900px) {
     .subs-button{
@@ -1088,6 +1095,7 @@ footer {
     margin-right: 1.2rem;
     border: none;
     font-size: 1.1rem;
+    cursor: pointer;
     
 }
 .c6f-button:hover {
