@@ -610,10 +610,11 @@ body {
     color: #4b4b4b;
     text-transform: uppercase;
     cursor: pointer;
-    padding: 1rem 3rem 1rem 1rem !important;
+    padding: 0.5rem !important;
     appearance: none; /* Removes the default appearance */
     -webkit-appearance: none; /* For Safari */
     position: relative;
+    min-width: 0; /* Prevent shrinking */
 }
 
 .c6f-date::-webkit-calendar-picker-indicator {
@@ -641,8 +642,8 @@ body {
     }
     .content6-form *{
         grid-column: 1;
+        width: 100%;
     }
-   
 }
 
 
