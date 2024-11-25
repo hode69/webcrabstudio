@@ -155,10 +155,13 @@ header.header-scroll {
 
 
 .dropdown-menu a {
+    display: block;
     cursor: pointer;
     text-decoration: none;
     color: #eb0000;
-    margin-right: auto 0 auto auto;
+    margin: 0 auto;
+    text-align: center;
+
 }
 .dropdown-menu a:hover {
     color: #701414;
@@ -168,11 +171,15 @@ header.header-scroll {
     list-style-type: none;
     padding: 0.5rem 1.5rem;
     justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
 @media only screen and (max-width:768px) {
     .dropdown-menu {
         display: block;
+        width: 100%;
+        justify-content: center;
     }
 }
 
@@ -559,7 +566,7 @@ body {
 }
 @media only screen and (max-width:800px) {
     .content6-form{
-        width: 80%%;  
+        width: 80%;  
     }
 }
 
@@ -626,7 +633,7 @@ body {
 }
 @media only screen and (max-width:680px) {
     .content6-form{
-        width: 90%%; 
+        width: 90%; 
         grid-template-columns: 1fr;
     }
     .content6-form *{
@@ -850,7 +857,7 @@ footer {
 
 .job {
     text-align: center;
-    width: 80%%;
+    width: 80%;
     margin:0 auto;
     font-size: 4.8rem;
     color: #eb0000;
