@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         toggleNavbarIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
     };
 
-    toggleNavbar.addEventListener("pointerdown", toggleMenu);
+    toggleNavbar.addEventListener("click", toggleMenu);
 });
 
 
