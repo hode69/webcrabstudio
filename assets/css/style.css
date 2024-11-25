@@ -695,7 +695,7 @@ footer {
 }
 
 .subscribe {
-    margin: 1.44rem 0.5rem;
+    margin: 1.44rem 0;
     margin-bottom: auto;
     display: flex;
     flex-direction: column;
@@ -784,12 +784,12 @@ footer {
 
 .contact {
     height: auto;
-    margin: 1.44rem 0.5rem;
+    margin: 1.44rem 0rem;
 }
 
 .explore {
     height: auto;
-    margin: 1.44rem 0.5rem;
+    margin: 1.44rem 0em;
 
 }
 
