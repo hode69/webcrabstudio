@@ -557,6 +557,12 @@ body {
     margin: 1rem;
     box-sizing: border-box;
 }
+@media only screen and (max-width:800px) {
+    .content6-form{
+        width: 80%%;  
+    }
+}
+
 
 .content6-form input {
     height: 3rem;
@@ -570,6 +576,7 @@ body {
 .content6-form input:focus {
     border: 2px #4b4b4b;
 }
+
 
 .c6f-message {
     display: flex;
@@ -616,6 +623,16 @@ body {
     top: 50%;
     transform: translateY(-50%);
     pointer-events: none; /* Makes the icon non-clickable but allows the input's functionality */
+}
+@media only screen and (max-width:680px) {
+    .content6-form{
+        width: 90%%; 
+        grid-template-columns: 1fr;
+    }
+    .content6-form *{
+        grid-column: 1;
+    }
+   
 }
 
 
@@ -833,7 +850,7 @@ footer {
 
 .job {
     text-align: center;
-    width: 100%;
+    width: 80%%;
     margin:0 auto;
     font-size: 4.8rem;
     color: #eb0000;
