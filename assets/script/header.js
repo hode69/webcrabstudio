@@ -16,12 +16,15 @@ window.onload = function () {
     const toggleNavbarIcon = document.querySelector(".toggle-navbar i");
     const dropdownMenu = document.querySelector(".dropdown-menu");    
     
-    toggleNavbar.onclick = function () {
+    const toggleMenu = function () {
         dropdownMenu.classList.toggle("open");
         const isOpen = dropdownMenu.classList.contains("open");
     
         toggleNavbarIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
     };
+
+    toggleNavbar.addEventListener("click", toggleMenu);
+    toggleNavbar.addEventListener("touchstart", toggleMenu);
 };
 
 
