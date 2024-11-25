@@ -11,13 +11,12 @@ window.onscroll = function(e) {
 // navbar
 
 
-window.onload = function openNavbar() {
+window.onload = function () {
     const toggleNavbar = document.querySelector(".toggle-navbar");
     const toggleNavbarIcon = document.querySelector(".toggle-navbar i");
     const dropdownMenu = document.querySelector(".dropdown-menu");    
-    console.log(document.querySelector(".toggle-navbar"));
     
-    toggleNavbar.onclick = function openNavbar() {
+    toggleNavbar.onclick = function () {
         dropdownMenu.classList.toggle("open");
         const isOpen = dropdownMenu.classList.contains("open");
     
