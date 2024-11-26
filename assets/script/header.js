@@ -16,15 +16,15 @@ window.onload = function () {
     const toggleNavbarIcon = document.querySelector(".toggle-navbar i");
     const dropdownMenu = document.querySelector(".dropdown-menu");
 
-    if (!toggleNavbar) {
-        console.log("yes");
-    }else {
-        console.log("none");
-    }
+    // if (!toggleNavbar) {
+    //     console.log("yes");
+    // }else {
+    //     console.log("none");
+    // }
 
     const toggleMenu = function () {
         dropdownMenu.classList.toggle("open");
-        alert("cok");
+        // alert("cok");
         const isOpen = dropdownMenu.classList.contains("open");
         toggleNavbarIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
     };
