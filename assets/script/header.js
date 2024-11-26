@@ -17,7 +17,9 @@ window.onload = function () {
     const dropdownMenu = document.querySelector(".dropdown-menu");
 
     if (!toggleNavbar) {
-        alert("asu")
+        console.log("yes");
+    }else {
+        console.log("none");
     }
 
     const toggleMenu = function () {
