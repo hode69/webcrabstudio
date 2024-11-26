@@ -93,7 +93,7 @@ header.header-scroll {
 .toggle-navbar {
     visibility: hidden;
     opacity: 0;
-    width: 1.5rem;
+    width: 0;
     pointer-events: none;
 }
 @media only screen and (max-width:768px) {
@@ -107,6 +107,7 @@ header.header-scroll {
 .toggle-navbar i {
     cursor: pointer;
     color: #eb0000;
+    font-size: 1.5rem;
 }
 
 .menu {
@@ -455,7 +456,7 @@ body {
 .carousel-item:hover {
     transition: 300ms ease-in-out;
     transform: translateY(-0.8rem);
-    opacity: 90%;
+    opacity: 80%;
     cursor: pointer;
 }
 
@@ -872,7 +873,7 @@ footer {
     text-align: center;
     width: 80%;
     margin:0 auto;
-    font-size: 4.8rem;
+    font-size: 4rem;
     color: #eb0000;
 }
 @media only screen and (max-width: 768px){
@@ -899,7 +900,7 @@ footer {
     color:#eb0000;
     text-align: center;
     font-weight: 550;
-    padding-top: 1rem;
+    padding: 1rem 0;
 }
 
 .content4 p {
@@ -909,7 +910,7 @@ footer {
 .container5 h1 {
     text-align:center;
     color: #eb0000;
-    font-size: 4.8rem;
+    font-size: 4rem;
 }
 @media only screen and (max-width: 768px){
     .container5 h1 {
@@ -975,8 +976,7 @@ footer {
 
 /*button*/
 .header-button {
-    margin: 0.72rem;
-    margin-right: 0;
+    margin: 0.7rem -3rem 0.7rem auto;
     display: flex;
     color: #ffffff;
     background-color: rgb(255, 81, 0);
@@ -1023,16 +1023,16 @@ footer {
 
 .dropdown-header-button:hover {
     background-color: rgb(255, 116, 0);
-    transform: scale(1.05,1.05);
+    /* transform: scale(1.05,1.05); */
     transition: 300ms ease-in-out;
-    box-shadow: 2px 2px 10px 3px #4b4b4b;
+    box-shadow: 0px 0px 10px 1px #4b4b4b79;
 }
 
 .dropdown-header-button:active {
     background-color: rgb(216, 86, 0);
     transform: scale(1.015,1.015);
     transition: 150ms ease-in-out;
-    box-shadow: 1px 1px 5px 2px #4b4b4b;
+    /* box-shadow: 1px 1px 5px 2px #4b4b4b; */
 }
 
 
@@ -1189,4 +1189,27 @@ footer {
     transform: scale(0.95,0.95);
     transition: 150ms ease-in-out;
     box-shadow: 1px 1px 5px 2px #4b4b4b;
+}
+
+/* animation */
+
+@media (prefers-reduced-motion: no-preference){
+    @keyframes appear {
+        0% {
+            opacity: 0;
+            transform: translateY(400px);
+            scale: 0.9;
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+            scale: 1;
+        }
+    }
+}
+
+.anim {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
 }
