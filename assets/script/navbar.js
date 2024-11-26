@@ -13,6 +13,7 @@ window.onload = function () {
     }
 
     const toggleMenu = function () {
+        alert("clicked")
         if (!toggleNavbar) {
             alert("Toggle navbar element is missing!");
         } else {
@@ -29,10 +30,7 @@ window.onload = function () {
             console.log("Media query matched. Mobile mode.");
             toggleNavbar.forEach(e =>{
                 e.addEventListener("pointerdown", toggleMenu);
-
-            }) 
-
-            
+            })             
         } else {
             console.log("Media query did not match. Desktop mode.");
         }
