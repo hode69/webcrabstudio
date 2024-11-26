@@ -91,12 +91,16 @@ header.header-scroll {
 }
 
 .toggle-navbar {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
     width: 1.5rem;
+    pointer-events: none;
 }
 @media only screen and (max-width:768px) {
     .toggle-navbar{
-        display: block;
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
     }
 }
 
