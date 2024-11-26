@@ -14,7 +14,7 @@ window.onload = function () {
     }
 
     const toggleMenu = function () {
-        alert("clicked")
+        // alert("clicked")
         if (!toggleNavbar) {
             alert("Toggle navbar element is missing!");
         } else {
