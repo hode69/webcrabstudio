@@ -121,16 +121,16 @@ header.header-scroll {
 
 .menu a {
     cursor: pointer;
-    color: #eb0000;
+    color: #BC2F47;
     text-decoration: none;
 }
 .menu a:hover {
-    color: #701414;
+    color: #771e2d;
 }
 
 .menu li {
     list-style-type: none;
-    font-weight: 400;
+    font-weight: 490;
 }
 
 @media only screen and (max-width:768px) {
@@ -261,7 +261,7 @@ body {
     flex-direction: column;
     width: 100%;
     align-items: center;
-    color: rgb(201, 0, 0);
+    color: #BC2F47;
     height: fit-content;
     position: relative;
     top: 50%;
@@ -658,9 +658,10 @@ footer {
     width: 100%;
     height: auto;
     bottom: 0;
-    color: #ffffff;
-    background-color: #0e808f;
+    color: #000000;
+    background-color: #ffffff;
     font-size: 1rem;
+    border-top: 1px solid #cacaca;
 }
 
 .footer-container {
@@ -748,7 +749,7 @@ footer {
     font-size: 1rem;
     outline: none;
     border-radius: 5px;
-    border: 1.5px solid #01f7ff;
+    border: 1.5px solid #424242;
     background: transparent;
     color: transparent;
     z-index: 1111;
@@ -768,7 +769,7 @@ footer {
     font-size: 1rem;
     margin-top: 10px;
     height: 100%;
-    color: #ffffff;
+    color: #000000;
     padding-left:10px; 
     align-items: center;
     max-width: 450px;
@@ -829,7 +830,6 @@ footer {
 .icon-img {
     width: 2rem;
     height: auto;
-    filter:invert(100%);
 }
 
 .license {
@@ -837,7 +837,7 @@ footer {
     display: flex;
     justify-content: center;
     text-align: center;
-    color: #ffffff;
+    color: #000000;
     margin: 0.96rem auto;
     padding-bottom: 2rem;
 }
@@ -876,7 +876,7 @@ footer {
     width: 80%;
     margin:0 auto;
     font-size: 4rem;
-    color: #eb0000;
+    color: #BC2F47;
 }
 @media only screen and (max-width: 768px){
     .job {
@@ -899,7 +899,7 @@ footer {
 }
 
 .content4 h2 {
-    color:#eb0000;
+    color:#BC2F47;
     text-align: center;
     font-weight: 550;
     padding: 1rem 0;
@@ -911,7 +911,7 @@ footer {
 
 .container5 h1 {
     text-align:center;
-    color: #eb0000;
+    color: #BC2F47;
     font-size: 4rem;
 }
 @media only screen and (max-width: 768px){
@@ -921,7 +921,7 @@ footer {
 }
 
 .content6 h1 {
-    color: #eb0000;
+    color: #BC2F47;
     font-size: 3rem;
     margin: 1rem 1rem 0 1rem;
     text-align: center;
@@ -934,6 +934,10 @@ footer {
 
 .contact p{
     padding-top: 1rem;
+}
+
+.contact h3 {
+    color: #bc2f47;
 }
 
 .explore li {
@@ -951,19 +955,28 @@ footer {
 
 .explore a {
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
+}
+.explore a:hover {
+    color: #E85322;
+}
+
+.explore h3 {
+    color: #bc2f47;
 }
 
 .subscribe h3 {
     padding-bottom: 1rem;
+    color: #bc2f47;
 }
 
 .sosmed h3{
     margin: 1rem auto;
+    color: #bc2f47;
 }
 
 .carousel-item h2 {
-    color: #eb0000;
+    color: #BC2F47;
     text-align: center;
     margin-top: 1.5rem;
 }
@@ -981,7 +994,7 @@ footer {
     margin: 0.7rem auto 0.7rem auto;
     display: flex;
     color: #ffffff;
-    background-color: rgb(255, 81, 0);
+    background-color: #bc2f47;;
     text-decoration: none;
     text-align: center;
     font-weight:500;
@@ -996,17 +1009,17 @@ footer {
 }
 
 .header-button:hover {
-    background-color: rgb(255, 116, 0);
+    background-color: #bd4e60;
     transform: scale(1.05,1.05);
     transition: 300ms ease-in-out;
-    box-shadow: 2px 2px 10px 3px #4b4b4b;
+    /* box-shadow: 2px 2px 10px 3px #4b4b4b; */
 }
 
 .header-button:active {
-    background-color: rgb(216, 86, 0);
+    background-color: #9b263a;
     transform: scale(1.015,1.015);
     transition: 150ms ease-in-out;
-    box-shadow: 1px 1px 5px 2px #4b4b4b;
+    /* box-shadow: 1px 1px 5px 2px #4b4b4b; */
 }
 
 .dropdown-header-button {
@@ -1014,7 +1027,7 @@ footer {
     margin-right: 0;
     display: flex;
     color: #ffffff !important;
-    background-color: rgb(255, 81, 0);
+    background-color:#BC2F47;
     text-decoration: none;
     text-align: center;
     font-weight:500;
@@ -1024,14 +1037,14 @@ footer {
 }
 
 .dropdown-header-button:hover {
-    background-color: rgb(255, 116, 0);
+    background-color: #bd4e60;
     /* transform: scale(1.05,1.05); */
     transition: 300ms ease-in-out;
-    box-shadow: 0px 0px 10px 1px #4b4b4b79;
+    /* box-shadow: 0px 0px 10px 1px #4b4b4b79; */
 }
 
 .dropdown-header-button:active {
-    background-color: rgb(216, 86, 0);
+    background-color: #9b263a;
     transform: scale(1.015,1.015);
     transition: 150ms ease-in-out;
     /* box-shadow: 1px 1px 5px 2px #4b4b4b; */
@@ -1043,7 +1056,7 @@ footer {
     margin-right: auto;
     display: flex;
     color: #ffffff;
-    background-color: rgb(255, 51, 0);
+    background-color: #BC2F47;
     text-decoration: none;
     text-align: center;
     font-weight:500;
@@ -1051,27 +1064,27 @@ footer {
     border-radius: 7px;
     transition: 300ms;
     width: fit-content;
-    box-shadow: 1px 1px 10px 2px #4b4b4b54;
+    /* box-shadow: 1px 1px 10px 2px #4b4b4b54; */
 }
 
 .content-button:hover {
-    background-color: rgb(255, 80, 36);
+    background-color: #bd4e60;
     transform: scale(1.05,1.05);
     transition: 300ms ease-in-out;
-    box-shadow: 2px 2px 10px 3px #4b4b4b;
+    /* box-shadow: 2px 2px 10px 3px #4b4b4b; */
 }
 
 .content-button:active {
-    background-color: rgb(211, 67, 31);
+    background-color: #9b263a;
     transform: scale(1.015,1.015);
     transition: 150ms ease-in-out;
-    box-shadow: 1px 1px 5px 2px #4b4b4b;
+    /* box-shadow: 1px 1px 5px 2px #4b4b4b; */
 }
 
 .subs-button {
     display: flex;
     color: #ffffff;
-    background-color: rgb(255, 51, 0);
+    background-color: #BC2F47;
     text-decoration: none;
     text-align: center;
     font-weight:500;
@@ -1092,16 +1105,16 @@ footer {
 }
 
 .subs-button:hover {
-    background-color: rgb(255, 80, 36);
+    background-color: #bd4e60;
     transition: 300ms ease-in-out;
-    box-shadow: 2px 2px 10px 3px #4b4b4b;
+    /* box-shadow: 2px 2px 10px 3px #4b4b4b; */
 }
 
 .subs-button:active {
-    background-color: rgb(211, 67, 31);
+    background-color: #9b263a;
     transform: scale(0.95,0.95);
     transition: 150ms ease-in-out;
-    box-shadow: 1px 1px 5px 2px #4b4b4b;
+    /* box-shadow: 1px 1px 5px 2px #4b4b4b; */
 }
 
 .carousel-button i {
@@ -1115,7 +1128,7 @@ footer {
     background-color: #ffffffa2;
     backdrop-filter: blur(5px);
     margin: 0;
-    box-shadow: 3px 3px 9px 5px rgba(0, 0, 0,0.12);
+    /* box-shadow: 3px 3px 9px 5px rgba(0, 0, 0,0.12); */
     position: absolute;
     min-width: 50px;
     min-height: 50px;
@@ -1137,27 +1150,27 @@ footer {
     position: relative;
     text-decoration: none;
     color: #ffffff;
-    background-color: #eb0000;
+    background-color: #BC2F47;
     padding: 0.8rem 1rem;
     border-radius: 7px;
     font-weight: 500;
     font-size: 1.25rem;
     transition: 300ms ease-in-out;
     margin: 0 auto;
-    box-shadow: 1px 1px 10px 2px #5a5a5a77;
+    /* box-shadow: 1px 1px 10px 2px #5a5a5a77; */
 }
 .content5-button:hover {
-    background-color: rgb(255, 80, 36);
+    background-color: #bd4e60;
     transform: scale(1,1);
     transition: 300ms ease-in-out;
-    transform: translate(8px,0px);
+    transform: scale(1.03, 1.03);
     
 }
 
 .content5-button:active {
-    background-color: rgb(211, 67, 31);
-    transform: scale(1,1);
-    transform: translate(8px,0px);
+    background-color: #9b263a;
+    transform: scale(0.95,0.95);
+    
     transition: 150ms ease-in-out;
     
 }
@@ -1165,7 +1178,7 @@ footer {
 .c6f-button {
     display: flex !important;
     color: #ffffff;
-    background-color: rgb(255, 51, 0) !important;
+    background-color: #BC2F47 !important;
     font-weight:500;
     padding: 0.6rem 1rem !important;
     border-radius: 7px;
@@ -1181,16 +1194,16 @@ footer {
     
 }
 .c6f-button:hover {
-    background-color: rgb(255, 80, 36);
+    background-color: #bd4e60;
     transition: 300ms ease-in-out;
-    box-shadow: 2px 2px 10px 3px #4b4b4b;
+    /* box-shadow: 2px 2px 10px 3px #4b4b4b; */
 }
 
 .c6f-button:active {
-    background-color: rgb(211, 67, 31);
+    background-color: #9b263a;
     transform: scale(0.95,0.95);
     transition: 150ms ease-in-out;
-    box-shadow: 1px 1px 5px 2px #4b4b4b;
+    /* box-shadow: 1px 1px 5px 2px #4b4b4b; */
 }
 
 /* animation */
