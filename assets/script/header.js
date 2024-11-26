@@ -16,6 +16,10 @@ window.onload = function () {
     const toggleNavbarIcon = document.querySelector(".toggle-navbar i");
     const dropdownMenu = document.querySelector(".dropdown-menu");
 
+    if (!toggleNavbar) {
+        alert("asu")
+    }
+
     const toggleMenu = function () {
         dropdownMenu.classList.toggle("open");
         alert("cok");
