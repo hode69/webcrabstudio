@@ -40,7 +40,7 @@ window.onload = function () {
 
     windowMode(); // Initial mode check
     window.addEventListener("resize", windowMode);
-    }, 1000);
+    }, 500);
 
     // setTimeout(function () {
     //     console.log("Checking toggleNavbar after 500ms delay.");
