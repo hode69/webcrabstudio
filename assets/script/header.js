@@ -18,6 +18,7 @@ window.onload = function () {
 
     const toggleMenu = function () {
         dropdownMenu.classList.toggle("open");
+        alert("cok");
         const isOpen = dropdownMenu.classList.contains("open");
         toggleNavbarIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
     };
