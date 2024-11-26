@@ -661,10 +661,17 @@ footer {
     color: #000000;
     background-color: #ffffff;
     font-size: 1rem;
+    /* border-top: 1px solid #cacaca; */
+}
+
+.footer-border {
+    width: 80%;
     border-top: 1px solid #cacaca;
+    margin: 0 auto;
 }
 
 .footer-container {
+    padding-top: 3rem;
     height: auto;
     width: 65%;
     display: flex;
