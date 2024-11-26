@@ -1,5 +1,5 @@
 window.onload = function () {
-    let toggleNavbar = document.querySelector(".toggle-navbar");
+    let toggleNavbar = document.querySelectorAll(".toggle-navbar");
     const toggleNavbarIcon = document.querySelector(".toggle-navbar i");
     const dropdownMenu = document.querySelector(".dropdown-menu");
 
