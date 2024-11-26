@@ -1,4 +1,5 @@
 window.onload = function () {
+    setTimeout(function () {
     const toggleNavbar = document.querySelectorAll(".toggle-navbar");
     const toggleNavbarIcon = document.querySelector(".toggle-navbar i");
     const dropdownMenu = document.querySelector(".dropdown-menu");
@@ -38,6 +39,7 @@ window.onload = function () {
 
     windowMode(); // Initial mode check
     window.addEventListener("resize", windowMode);
+    }, 1000);
 
     // setTimeout(function () {
     //     console.log("Checking toggleNavbar after 500ms delay.");
