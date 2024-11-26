@@ -1,5 +1,5 @@
 window.onload = function () {
-    let toggleNavbar = document.querySelectorAll(".toggle-navbar");
+    const toggleNavbar = document.querySelectorAll(".toggle-navbar");
     const toggleNavbarIcon = document.querySelector(".toggle-navbar i");
     const dropdownMenu = document.querySelector(".dropdown-menu");
 
@@ -27,7 +27,12 @@ window.onload = function () {
         const mediaQuery = window.matchMedia("(max-width: 768px)");
         if (mediaQuery.matches) {
             console.log("Media query matched. Mobile mode.");
-            toggleNavbar.addEventListener("pointerdown", toggleMenu);
+            toggleNavbar.forEach(e =>{
+                e.addEventListener("click", toggleMenu);
+
+            }) 
+
+            
         } else {
             console.log("Media query did not match. Desktop mode.");
         }
