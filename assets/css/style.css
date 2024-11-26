@@ -455,11 +455,6 @@ body {
     transition: 300ms ease-in-out;
 }
 
-.car-border {
-    border-left: 0.5px solid #414c6138;
-    border-right: 0.5px solid #414c6138;
-}
-
 .carousel-item:hover {
     transition: 300ms ease-in-out;
     transform: translateY(-0.8rem);
