@@ -33,6 +33,15 @@ window.onload = function () {
         }
     }
 
-    window.addEventListener("resize", windowMode);
     windowMode(); // Initial mode check
+    window.addEventListener("resize", windowMode);
+
+    setTimeout(function () {
+        console.log("Checking toggleNavbar after 500ms delay.");
+        if (!toggleNavbar) {
+            console.error("Toggle navbar still not found after delay!");
+        } else {
+            console.log("Toggle navbar exists after delay.");
+        }
+    }, 1000); // Delay to let mobile browsers stabilize the render
 };
