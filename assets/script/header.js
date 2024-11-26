@@ -22,12 +22,18 @@ window.onload = function () {
     //     console.log("none");
     // }
 
+    
     const toggleMenu = function () {
-        dropdownMenu.classList.toggle("open");
-        // alert("cok");
-        const isOpen = dropdownMenu.classList.contains("open");
-        toggleNavbarIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
-    };
+    if (!toggleNavbar) {
+        alert("kosong");
+    } else {
+            dropdownMenu.classList.toggle("open");
+            // alert("cok");
+            const isOpen = dropdownMenu.classList.contains("open");
+            toggleNavbarIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+        };
+        
+    }
 
     // toggleNavbar.addEventListener("click", toggleMenu);
     // toggleNavbar.addEventListener("touchstart", toggleMenu);
