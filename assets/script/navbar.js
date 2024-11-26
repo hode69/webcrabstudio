@@ -28,7 +28,7 @@ window.onload = function () {
         if (mediaQuery.matches) {
             console.log("Media query matched. Mobile mode.");
             toggleNavbar.forEach(e =>{
-                e.addEventListener("click", toggleMenu);
+                e.addEventListener("pointerdown", toggleMenu);
 
             }) 
 
