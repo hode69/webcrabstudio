@@ -885,6 +885,7 @@ footer {
 
 .about-container2 {
     padding: 8rem 0;
+    padding-bottom: 11rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     flex-direction: row;
@@ -895,6 +896,10 @@ footer {
 @media only screen and (max-width: 768px) {
     .about-container1,.about-container2{
         grid-template-columns: 1fr;
+    }
+    .about-container2 {
+        padding-bottom: 5rem;
+        padding-top: 5rem;
     }
 
     .about-content1 {
@@ -955,7 +960,7 @@ footer {
     }
     .about-subcontainer3{
         order: 2;
-        padding: 10rem 0;
+        padding: 9rem 0;
     }
     .about-subcontainer4{
         order: 1;
