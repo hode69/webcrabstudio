@@ -542,6 +542,49 @@ body {
     width: 100%;
     border: 1px solid #607d999c;
     border-radius: 13px;
+    position: relative;
+}
+
+.submit-message {
+    border: 1px solid #42424275;
+    border-radius: 13px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #42424275;
+    display: none;
+
+    transition: opacity 1s ease-in-out;
+}
+
+#responseMessage.show {
+    display: block;
+    opacity: 1;
+}
+
+.message {
+    border-radius: 5px;
+    position: absolute;
+    border: 2px solid #757575;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    height: 3rem;
+    background-color: #e4e4e4;
+}
+.message p{
+    margin: auto;
+    text-align: center;
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .content6-img {

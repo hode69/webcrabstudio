@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- disable cache -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <!-- <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Expires" content="0" /> -->
 
     <title>Crab Studio</title>
 
@@ -159,16 +159,22 @@
         <div class="content6">
           <h1>Let's Get Connected!</h1>
           <p>please fill out this form if you'd like to meet us</p>
-          <form class="content6-form" action="">
-            <input type="text" class="c6f-name" placeholder="Name">
-            <input type="email" class="c6f-email" placeholder="e-mail">
-            <input type="text" class="c6f-subject" placeholder=" Subject">
+          <form id="bookingForm" class="content6-form" action="booking.php" method="POST">
+            <input type="hidden" name="access_key" value="786030c9-634a-4aeb-8039-d96ac33126c1">
+            <input type="text" class="c6f-name" placeholder="Name" name="name" required>
+            <input type="email" class="c6f-email" placeholder="e-mail" name="email" required>
+            <input type="text" class="c6f-subject" placeholder="Subject" name="subject" required>
             <!--<input type="text" class="c6f-message" placeholder="Messages">-->
-            <textarea name="Messages" class="c6f-message" id="#" placeholder="Messages"></textarea>
-            <label for="date">Set Meeting Date :</label>
-            <input type="date" class="c6f-date">
+            <textarea class="c6f-message" id="#" placeholder="Messages" name="message" required></textarea>
+            <label>Set Meeting Date :</label>
+            <input id="tanggal" type="date" class="c6f-date" name="meeting_date" required>
             <input type="submit" class="c6f-button" value="Submit">
           </form>
+          <div id="responseMessage" class="submit-message">
+            <div id="message" class="message">
+              <!-- <p>Submitted, wait for our respond to your e-mail</p> -->
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -182,6 +188,7 @@
 </footer>
 </body>
   <script src="assets/script/header.js"></script>
+  <script src="assets/script/book-submit.js"></script>
   <script src="assets/script/carousel.js"></script>
   <script>
     w3.includeHTML();
